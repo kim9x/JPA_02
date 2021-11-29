@@ -29,7 +29,8 @@ public class OrderRepository {
 						" and m.name like :name", Order.class)
 					.setParameter("status", orderSearch.getOrderStatus())
 					.setParameter("name", orderSearch.getMemberName())
-					.setMaxResults(1000)
+//					.setFirstResult(100) // 100번 째부터
+					.setMaxResults(1000) // 최대 1000건
 					.getResultList();
 	}
 
